@@ -26,6 +26,10 @@ bot.start((ctx) => {
   );
 });
 
+bot.help((ctx) => {
+  ctx.reply("እኔ የፈለጉትን ነገር ለመስራት ዝግጁ ነኝ። ስለ አጠቃቀሙ ወደፊት በሰፊው እገልጽላቹዋለሁ።");
+});
+
 bot.command("about", (ctx) => {
   ctx.reply(
     "this bot is developed by @amenadam_solomon \n https://github.com/amenadam"
