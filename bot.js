@@ -1,4 +1,6 @@
 require("dotenv").config();
+const packageInfo = require("./package.json"); // Import package.json
+
 const {
   processMessage,
   setBotName,
@@ -33,6 +35,12 @@ bot.help((ctx) => {
 bot.command("about", (ctx) => {
   ctx.reply(
     "this bot is developed by @amenadam_solomon \n https://github.com/amenadam"
+  );
+});
+
+bot.command("version", (ctx) => {
+  ctx.reply(
+    "This bot is currently at \n Version: " + `${packageInfo.version} `
   );
 });
 
